@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 export default function TextForm(props) {
   const handleUpper = () => {
     let newText = text.toUpperCase();
@@ -51,6 +50,8 @@ export default function TextForm(props) {
     mystyle.backgroundColor='#343a40'
     mystyle.color='white'
   }
+  const wordArray=text.trim().split(" ")
+  const words=wordArray[wordArray.length-1]===""?wordArray.length-1:wordArray.length
   return (
     <>
       <div className="container">
@@ -90,10 +91,10 @@ export default function TextForm(props) {
       <div className="container my-3" 
             style={mystyle}>
         <h3>Your text Summary</h3>
-        <p>{text.split(" ").length} words and {text.length} characters</p>
-        <p>{text.split(" ").length * 0.008} Minutes read</p>
+        <p>{words} words and {text.trim().length} characters</p>
+        <p>{words * 0.008} Minutes read</p>
         <h3>Preview</h3>
-        <p>{text.length>0?text:"There's no text to show!!"}</p>
+        <p>{text.length>0?text.trim():"There's no text to show!!"}</p>
       </div>
     </>
   );

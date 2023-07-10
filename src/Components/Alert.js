@@ -17,5 +17,5 @@ export default function Alert(props) {
 }
 
 Alert.propTypes = {
-  alert: PropTypes.string,
+  alert: PropTypes.object,
 };
