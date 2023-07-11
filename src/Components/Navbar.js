@@ -8,7 +8,7 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg bg-${props.mode} navbar-${props.mode}`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" href="#">
           {props.title}
         </a>
         <button
@@ -28,7 +28,7 @@ export default function Navbar(props) {
               {/* <Link to="/" className="nav-link active" aria-current="page" >
                 Home
               </Link> */}
-              <a href="/" className="nav-link active" aria-current="page" >
+              <a href="#" className="nav-link active" aria-current="page" >
                 Home
               </a>
             </li>
