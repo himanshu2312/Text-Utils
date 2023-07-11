@@ -40,6 +40,7 @@ export default function Navbar(props) {
             className="form-check-input"
             type="checkbox"
             role="switch"
+            aria-checked="false"
             id="greyModeSwitch"
             onClick={props.toggleMode}
           />
