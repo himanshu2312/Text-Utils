@@ -54,7 +54,7 @@ export default function Navbar(props) {
             }`}
             htmlFor="greyModeSwitch"
           >
-            Grey Mode
+            Dark Mode
           </label>
         </div>
       </div>
