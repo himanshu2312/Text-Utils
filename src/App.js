@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 
-import About from "./Components/About";
+// import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
 import Alert from "./Components/Alert";

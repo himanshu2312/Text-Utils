@@ -18,7 +18,7 @@ export default function TextForm(props) {
   };
   const handleCopy = () => {
      let copyText=document.getElementById("inputText");
-     copyText.select();
+    //  copyText.select();
      navigator.clipboard.writeText(copyText.value);
      props.showAlert("Text coppied to clicpboard!!", 'success');
   };
