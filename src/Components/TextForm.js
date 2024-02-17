@@ -17,22 +17,22 @@ export default function TextForm(props) {
     setText(newText.join(" "));
   };
   const handleCopy = () => {
-     let copyText=document.getElementById("inputText");
+    let copyText = document.getElementById("inputText");
     //  copyText.select();
-     navigator.clipboard.writeText(copyText.value);
-     props.showAlert("Text coppied to clicpboard!!", 'success');
+    navigator.clipboard.writeText(copyText.value);
+    props.showAlert("Text coppied to clicpboard!!", 'success');
   };
   const handleCross = () => {
-     let copyText=document.getElementById("inputText");
-     if (copyText.style.textDecoration) {
+    let copyText = document.getElementById("inputText");
+    if (copyText.style.textDecoration) {
       copyText.style.removeProperty('text-decoration');
     } else {
       copyText.style.setProperty('text-decoration', 'line-through');
     }
   };
   const handleUnderLine = () => {
-     let copyText=document.getElementById("inputText");
-     if (copyText.style.textDecoration) {
+    let copyText = document.getElementById("inputText");
+    if (copyText.style.textDecoration) {
       copyText.style.removeProperty('text-decoration');
     } else {
       copyText.style.setProperty('text-decoration', 'underline');
@@ -42,16 +42,16 @@ export default function TextForm(props) {
     setText(event.target.value);
   };
   const [text, setText] = useState("Enter the text");
-  let mystyle={
-    backgroundColor:'white',
-    color:'black'
+  let mystyle = {
+    backgroundColor: 'white',
+    color: 'black'
   }
-  if(props.mode==='dark'){
-    mystyle.backgroundColor='#343a40'
-    mystyle.color='white'
+  if (props.mode === 'dark') {
+    mystyle.backgroundColor = '#343a40'
+    mystyle.color = 'white'
   }
-  const wordArray=text.trim().split(" ")
-  const words=wordArray[wordArray.length-1]===""?wordArray.length-1:wordArray.length
+  const wordArray = text.trim().split(" ")
+  const words = wordArray[wordArray.length - 1] === "" ? wordArray.length - 1 : wordArray.length
   return (
     <>
       <div className="container">
@@ -88,13 +88,13 @@ export default function TextForm(props) {
           Clear
         </button>
       </div>
-      <div className="container my-3" 
-            style={mystyle}>
+      <div className="container my-3"
+        style={mystyle}>
         <h3>Your text Summary</h3>
         <p>{words} words and {text.trim().length} characters</p>
         <p>{words * 0.008} Minutes read</p>
         <h3>Preview</h3>
-        <p>{text.length>0?text.trim():"There's no text to show!!"}</p>
+        <p>{text.length > 0 ? text.trim() : "There's no text to show!!"}</p>
       </div>
     </>
   );
